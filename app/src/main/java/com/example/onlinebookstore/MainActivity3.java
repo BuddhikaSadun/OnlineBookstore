@@ -1,7 +1,4 @@
 package com.example.onlinebookstore;
-
-
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -42,21 +39,13 @@ import android.os.Bundle;
 
 public class MainActivity3 extends AppCompatActivity {
 
-
-
    FirebaseAuth fAuth;
-
-
     DatabaseReference databaseReference;
     RecyclerView recyclerView;
     ArrayList<UsersItem> usersItemArrayList;
     UsersRecyclerAdapter adapter;
 
-
-
-
     Button buttonAdd,cart;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,11 +54,7 @@ public class MainActivity3 extends AppCompatActivity {
 
        fAuth = FirebaseAuth.getInstance();
 
-
-
-
-
-        FirebaseDatabase.getInstance().setPersistenceEnabled(true); // work offline
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         Objects.requireNonNull(getSupportActionBar()).hide();
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
@@ -79,12 +64,7 @@ public class MainActivity3 extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         usersItemArrayList = new ArrayList<>();
-
-
-
-
         buttonAdd = findViewById(R.id.buttonAdd);
-
         cart=findViewById(R.id.moveCart);
 
         //cart button
